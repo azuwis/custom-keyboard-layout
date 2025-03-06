@@ -1,0 +1,25 @@
+type OVERLAY
+
+# https://xdaforums.com/t/tutorial-external-keyboard-remapping-without-root-4-1.4492481/
+# https://source.android.com/docs/core/interaction/input/key-character-map-files
+# https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/view/KeyEvent.java
+# https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/packages/InputDevices/res/raw/keyboard_layout_english_us.kcm
+
+# adb shell getevent | awk '/0001 .... 00000001/ {print(strtonum("0x"$3))}'
+
+# SEARCH
+map key 217 COMMA
+# EXPLORER
+map key 150 PERIOD
+# ENVELOPE
+map key 155 SLASH
+
+# MEDIA_PLAY_PAUSE
+# map key 164
+# MEDIA_PREVIOUS
+map key 165 APOSTROPHE
+# MEDIA_NEXT
+map key 163 MINUS
+
+# WINDOW
+map key 125 APP_SWITCH
